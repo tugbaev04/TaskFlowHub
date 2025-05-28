@@ -1,0 +1,83 @@
+.kanban-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.kanban-container h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.kanban {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.kanban-column {
+  flex: 1;
+  min-width: 250px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.kanban-column h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e0e0e0;
+  color: #444;
+  text-transform: uppercase;
+}
+
+.kanban-task {
+  background-color: white;
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  cursor: move;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.kanban-task:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.kanban-task:active {
+  cursor: grabbing;
+}
+
+/* Column-specific colors */
+.kanban-column:nth-child(1) h3 {
+  border-bottom-color: #f87171; /* red for todo */
+}
+
+.kanban-column:nth-child(2) h3 {
+  border-bottom-color: #60a5fa; /* blue for in progress */
+}
+
+.kanban-column:nth-child(3) h3 {
+  border-bottom-color: #34d399; /* green for done */
+}
+
+/* Debug styles */
+.debug-info {
+  background-color: #fffbeb;
+  border: 1px solid #fbbf24;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-family: monospace;
+  white-space: pre-wrap;
+}
