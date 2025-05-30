@@ -98,13 +98,12 @@ function AppLayout() {
                         onClick={onSiderClick}
                     />
                 </Sider>
-                <Layout style={{ padding: '0 24px 24px' }}>
+                <Layout style={{ padding: '0 24px 24px', backgroundColor: 'white' }}>
                     <Content
                         style={{
                             padding: 24,
                             margin: 0,
                             minHeight: 280,
-                            background: colorBgContainer,
                             borderRadius: borderRadiusLG,
                         }}
                     >
@@ -152,9 +151,3 @@ function App() {
 }
 
 export default App;
-// const [tasks, setTasks] = useState(mockTasks);
-//
-// // Add function to handle task movement
-// const handleDragEnd = (result) => {
-//   // Update tasks state based on drag result
-// };
